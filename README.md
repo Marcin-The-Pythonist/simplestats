@@ -16,4 +16,10 @@ This project demonstrates my comprehension of statistical concepts and proficien
   <li>Quartiles</li>
 </ul>
 
+##### Inferential statistics:
+<ul>
+  <li>Factorial</li>
+  <li>Probability mass function</li>
+</ul>
+
 # More coming soon!
