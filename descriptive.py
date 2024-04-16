@@ -78,6 +78,10 @@ def quartiles(arg):
             Q3 = (arg[int(len(arg) / 2) + int(len(arg) / 4)] + (arg[int(len(arg) / 2) + int(len(arg) / 4) - 1])) / 2
         return f"25%: {Q1}\n50%: {Q2}\n75%: {Q3}"
        
+def correlation(data1,data2):
+      # Variance observed / maximum possible variance
+      pass
+      
 
-        
-    
+
+
