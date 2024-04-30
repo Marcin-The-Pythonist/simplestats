@@ -78,10 +78,23 @@ def quartiles(arg):
             Q3 = (arg[int(len(arg) / 2) + int(len(arg) / 4)] + (arg[int(len(arg) / 2) + int(len(arg) / 4) - 1])) / 2
         return f"25%: {Q1}\n50%: {Q2}\n75%: {Q3}"
        
-def correlation(data1,data2):
-      # Variance observed / maximum possible variance
-      pass
-      
+def covariance(data1,data2):
+        """
+        Covariance tells us about the direction of two variables.
+        
+        Parameters:
+        Data1: list or tuple.
+        Data2: list or tuple.
 
-
-
+        Returns: Covariance of two samples.(float) 
+        """
+        product = 0
+        if len(data1) != len(data2):
+              raise ValueError("Samples must be of the same size.")
+        if len(data1) < 2 or len(data2) < 2:
+              raise ValueError("Samples must be at least of size 2.")
+        for i,j in zip(data1,data2):
+            x = i - mean(data1) # Distance from mean of data1
+            y = j - mean(data2) # Distance from mean of data2 
+            product += x * y
+        return product / (len(data1) - 1)
